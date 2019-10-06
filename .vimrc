@@ -6,11 +6,16 @@ Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ap/vim-buftabline'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 
-Plug 'https://github.com/w0ng/vim-hybrid'
+Plug 'w0ng/vim-hybrid'
+
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
@@ -55,3 +60,6 @@ function! WinMove(key)
   endif
 endfunction
 
+set hidden
+nnoremap <C-\> :bnext<CR>
+nnoremap <C-/> :bprev<CR>
