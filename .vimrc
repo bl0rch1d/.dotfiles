@@ -2,11 +2,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
+"Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ap/vim-buftabline'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
@@ -14,10 +14,15 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 
 Plug 'w0ng/vim-hybrid'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'pangloss/vim-javascript'
 
 call plug#end()
+
+"set t_Co=256
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme='wombat'
 
 syntax enable
 
@@ -60,6 +65,9 @@ function! WinMove(key)
   endif
 endfunction
 
-set hidden
-nnoremap <C-\> :bnext<CR>
-nnoremap <C-/> :bprev<CR>
+"set hidden
+nnoremap <C-\> :tabn<CR>
+nnoremap <C-_> :tabp<CR>
+
+
+map <silent> <C-p> :FZF<CR>
