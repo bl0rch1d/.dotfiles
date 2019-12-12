@@ -121,3 +121,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 alias rr='rake routes'
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

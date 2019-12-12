@@ -1,12 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
-"Fuzzy files
+Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
+
+" Fuzzy files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-"Utils
-Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
@@ -14,25 +14,27 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
-"Ruby/RoR
+"Ruby
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 
-"Color themes
+"Themes
 Plug 'w0ng/vim-hybrid'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'balanceiskey/vim-framer-syntax'
 
-"JS
 Plug 'pangloss/vim-javascript'
 
-"Lintering engine
+" Lintering engine
 Plug 'dense-analysis/ale'
+
+"Unix helper
+Plug 'tpope/vim-eunuch'
 
 call plug#end()
 
 set t_Co=256
 let g:airline_powerline_fonts = 1
-let g:airline_theme='wombat'
+let g:airline_theme='base16'
 
 syntax enable
 
@@ -45,10 +47,13 @@ set smartindent
 
 set backspace=indent,eol,start
 
-"colorscheme hybrid
+color vim-framer-syntax
+
+let g:lightline = { 'colorscheme': 'framer' }
+
 set background=dark
 highlight Normal ctermbg=none
-highlight LineNr ctermfg=red
+highlight LineNr ctermfg=green
 
 set hlsearch
 set incsearch
