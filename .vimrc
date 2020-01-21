@@ -17,6 +17,10 @@ Plug 'tpope/vim-commentary'
 "Ruby
 Plug 'vim-ruby/vim-ruby'
 
+"Python
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'nvie/vim-flake8'
+
 "Themes
 Plug 'w0ng/vim-hybrid'
 Plug 'vim-airline/vim-airline-themes'
