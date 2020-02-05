@@ -19,7 +19,7 @@ Plug 'vim-ruby/vim-ruby'
 
 "Python
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'nvie/vim-flake8'
+" Plug 'nvie/vim-flake8'
 
 "Themes
 Plug 'w0ng/vim-hybrid'
@@ -91,6 +91,8 @@ nnoremap <C-_> :tabp<CR>
 map <C-p> :Files<CR>
 
 "Ale config
-let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
+let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'], 'python': ['flake8'] }
 let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
+
+let g:pymode_options_max_line_length = 120
